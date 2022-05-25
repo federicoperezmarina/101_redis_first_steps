@@ -27,6 +27,15 @@ In this step we are able to start using redis. It is very easy to use, redis is 
 
 ### Example 1
 The first example explains how to set & read a cache
+```python
+import redis
+
+r = redis.Redis(host='localhost', port=6379, db=0)
+r.set('key', 'value')
+print(r.get('key'))
+```
+
+How to run the example:
 ```sh
 cd /tmp
 python3 example_1_redis.py
